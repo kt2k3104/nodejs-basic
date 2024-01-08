@@ -1,0 +1,12 @@
+services:
+  dev-database:
+    image: mysql
+    restart: always
+    container_name: mysql-database
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./database:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: khai2000
+      MYSQL_DATABASE: blogdb
